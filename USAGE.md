@@ -18,7 +18,10 @@ Subagents are specialized AI agents that extend Claude Code's capabilities. Each
 
 1. **Find the subagent you need** - Browse the `categories/` folder
 2. **Copy the `.md` file** to your project's `.claude/agents/` directory
-3. **Start using it** - Claude Code automatically detects and loads the subagent
+3. **Restart Claude Code** - Agents are discovered at startup
+4. **Start using it** - Claude Code automatically loads the subagent
+
+> **Note:** If you want to add agents without restarting, use `/agents` instead (see Method 3).
 
 ```bash
 # Example: Add the backend-developer subagent to your project
@@ -47,9 +50,9 @@ mkdir -p ~/.claude/agents
 cp categories/04-quality-security/code-reviewer.md ~/.claude/agents/
 ```
 
-### Method 3: Use the /agents Command
+### Method 3: Use the /agents Command (No Restart Required)
 
-Claude Code has a built-in interface for managing subagents:
+Claude Code has a built-in interface for managing subagents. Agents created this way are **immediately available** without restarting:
 
 ```bash
 /agents
@@ -60,6 +63,8 @@ From here you can:
 - Create new subagents (Claude can draft them for you)
 - Edit subagent configurations
 - Set tool permissions
+
+You can copy the content from any agent file in this repository and paste it when creating a new agent via `/agents`.
 
 ## Using Subagents in Conversations
 
