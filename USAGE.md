@@ -26,6 +26,17 @@ mkdir -p .claude/agents
 cp categories/01-core-development/backend-developer.md .claude/agents/
 ```
 
+You can also organize agents in subdirectories (Claude Code discovers them recursively):
+
+```bash
+# Maintain category structure
+mkdir -p .claude/agents/core-development
+cp categories/01-core-development/backend-developer.md .claude/agents/core-development/
+
+mkdir -p .claude/agents/security
+cp categories/04-quality-security/code-reviewer.md .claude/agents/security/
+```
+
 ### Method 2: Global Installation
 
 For subagents you want available across all projects:
